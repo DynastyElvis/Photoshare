@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from .models import Photo, Category
 
 # Create your views here.
 
 def gallery(request):
+    categories = Category.objects.all()
+    context = {'categories': categories}
     return render(request, 'photos/gallery.html')
 
 

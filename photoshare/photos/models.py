@@ -12,7 +12,7 @@ class Category(models.Model): # The Category class inherits from the Model class
         """
 
 class Photo(models.Model): # inherits from the Model class
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     image = models.ImageField(null=False, blank=False)
     description = models.CharField(max_length=200, null=False, blank=False)
     def __str__(self):

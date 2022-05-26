@@ -3,7 +3,7 @@ from .models import Category, Photo
 
 # Create your views here.
 
-def gallery(request):
+def gallery(request):#, category_id):
     categories = Category.objects.all()
     photos = Photo.objects.all()
     
@@ -11,14 +11,14 @@ def gallery(request):
     return render(request, 'photos/gallery.html', context)
 
 
-def viewPhoto(request, pk):
+def viewPhoto(request, pk):#, category_id):
     photo = Photo.objects.get(id=pk)
 
     return render(request, 'photos/photo.html', {'photo': photo})
 
 
 def addPhoto(request):
-    categories = Category.objects.all()
+    categories = Category.objects.all()#.order_by('name')
     
     if request.method == 'POST':
         data = request.POST
@@ -26,10 +26,11 @@ def addPhoto(request):
        
        
         if data['category'] != 'none':
-            category = Category.objects.get(id=data['category'])
+            category = Category.objects.get(id=data['category'])#.get(name=data['category'])
            
         elif data['category_new'] != '':
             category, created = Category.objects.get_or_create(name=data['category_new'])
-        
+        else :
+            category = None
     context = {'categories': categories}
     return render(request, 'photos/add.html', context)

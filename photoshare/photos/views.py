@@ -12,7 +12,7 @@ def gallery(request):
 
 
 def viewPhoto(request, pk):
-    photos = Photo.objects.get(id=pk)
+    photo = Photo.objects.get(id=pk)
 
     return render(request, 'photos/photo.html', {'photo': photo})
 

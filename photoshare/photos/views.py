@@ -5,10 +5,15 @@ from .models import Category, Photo
 
 def gallery(request):#, category_id):
     category = request.GET.get('category')
-    print('category: ', category)
     
     
-    
+    if category == 'none':
+        photos = Photo.objects.all()
+
+
+    else:
+        photos = Photo.objects.filter(category__name__contains=category)
+
     
     categories = Category.objects.all()
     photos = Photo.objects.all()

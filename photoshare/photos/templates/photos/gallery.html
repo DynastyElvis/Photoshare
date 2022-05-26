@@ -11,9 +11,7 @@
     .image-thumbnail {
         width: 200px;
         height: 200px;
-        border: 1px solid rgb(24, 15, 15);
-        border-radius: 4px;
-        padding: 5px;
+        
     }
 </style>
 
@@ -50,118 +48,30 @@
 
                     </ul>
                   </div>
+
             </div> <!-- end of col-md-3 -->
+            
             <div class="col-md-9">
                 <div class="row">
-                    
+
+                    {% for photo in photos %}
                     <div class="col-md-4" >
                         <div>
                             <div class="card my-2">
-                                <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
+                                <img class="image-thumbnail" src="{{photo.image}}" alt="Card image cap">
                                 <div class="card-body">
-                                  <small class="card-text">Category: Athenians </small>
+                                  <small>Category: Athenians </small>
                                 </div>
                                 <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
                             </div>
                         </div>
-        </div>
-
-        <div class="col-md-4" >
-            <div>
-                <div class="card my-2">
-                    <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <small class="card-text">Category: Athenians </small>
+                        {% empty %}
+                        <h2>Empty Directory</h2>
+                        {% endfor %}
                     </div>
-                    <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
                 </div>
-            </div>
-</div>
 
-<div class="col-md-4" >
-    <div>
-        <div class="card my-2">
-            <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
-            <div class="card-body">
-              <small class="card-text">Category: Athenians </small>
-            </div>
-            <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
         </div>
     </div>
-</div>
-
-<div class="col-md-4" >
-    <div>
-        <div class="card my-2">
-            <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
-            <div class="card-body">
-              <small class="card-text">Category: Athenians </small>
-            </div>
-            <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-4" >
-    <div>
-        <div class="card my-2">
-            <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
-            <div class="card-body">
-              <small class="card-text">Category: Athenians </small>
-            </div>
-            <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-4" >
-    <div>
-        <div class="card my-2">
-            <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
-            <div class="card-body">
-              <small class="card-text">Category: Athenians </small>
-            </div>
-            <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-4" >
-    <div>
-        <div class="card my-2">
-            <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
-            <div class="card-body">
-              <small class="card-text">Category: Athenians </small>
-            </div>
-            <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-4" >
-    <div>
-        <div class="card my-2">
-            <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
-            <div class="card-body">
-              <small class="card-text">Category: Athenians </small>
-            </div>
-            <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-4" >
-    <div>
-        <div class="card my-2">
-            <img class="image-thumbnail" src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="Card image cap">
-            <div class="card-body">
-              <small class="card-text">Category: Athenians </small>
-            </div>
-            <a href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Open</a>
-        </div>
-    </div>
-</div>
-    </div>
-</div>
 </body>
 </html>

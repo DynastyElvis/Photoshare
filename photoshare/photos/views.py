@@ -4,6 +4,12 @@ from .models import Category, Photo
 # Create your views here.
 
 def gallery(request):#, category_id):
+    category = request.GET.get('category')
+    print('category: ', category)
+    
+    
+    
+    
     categories = Category.objects.all()
     photos = Photo.objects.all()
     

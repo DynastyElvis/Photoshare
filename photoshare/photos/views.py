@@ -7,12 +7,12 @@ def gallery(request):#, category_id):
     category = request.GET.get('category')
     
     
-    if category == 'none':
+    if category == 'None':
         photos = Photo.objects.all()
 
 
     else:
-        photos = Photo.objects.filter(category__name__contains=category)
+        photos = Photo.objects.filter(category__name=category)
 
     
     categories = Category.objects.all()

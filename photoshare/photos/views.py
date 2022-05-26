@@ -6,7 +6,7 @@ from .models import Photo, Category
 def gallery(request):
     categories = Category.objects.all()
     context = {'categories': categories}
-    return render(request, 'photos/gallery.html')
+    return render(request, 'photos/gallery.html', context)
 
 
 def viewPhoto(request, pk):

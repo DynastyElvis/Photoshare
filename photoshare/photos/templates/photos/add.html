@@ -35,11 +35,12 @@
 
 
                 <form method="POST" action="" enctype="multipart/form-data">
+                  (% csrf_token %)
 
 
                         <div class="form-group m-6">
                             <label>Description</label>
-                            <input type="description" placeholder="Validate your Description" class="form-control">
+                            <input required type="description" type="text" placeholder="Validate your Description" class="form-control">
                           </div>
   
 
@@ -70,7 +71,7 @@
 
                         <div class="form-group m--6">
                           <label>Upload your preferred image to the Collage</label>
-                          <input name ="image" type="file" class="form-control-file">
+                          <input required name ="image" type="file" class="form-control-file">
                         </div>
 
                         <button type="submit" class="btn btn-primary m-6">

@@ -23,8 +23,13 @@ def addPhoto(request):
     if request.method == 'POST':
         data = request.POST
         image = request.FILES['image']
+       
+       
+        if data['category'] != 'none':
+            category = Category.objects.get(id=data['category'])
+           
+        elif data['category_new'] != '':
+            category, created = Category.objects.get_or_create(name=data['category_new'])
         
-        print('data:', data)
-        print('image:', image)
     context = {'categories': categories}
     return render(request, 'photos/add.html', context)

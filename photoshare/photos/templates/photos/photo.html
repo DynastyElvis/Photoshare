@@ -14,8 +14,8 @@
             <div class="col">
                 <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Back to Collages Homepage</a>
                 <div style="height: 65vh;">
-                    <img style="max-width: 100%; max-height: 100%; "   src="https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1523990256931-WTLLEMWXF4ZUK7C4IMF1/shutterstock_126952187.jpg" alt="">
-                 <p>Athenians, Software Engineering. Moringa School, 2022</p>
+                    <img style="max-width: 100%; max-height: 100%; "   src="{{photo.image.url}}" alt="">
+                 <p>{{photo.description}}</p>
                 </div>
             </div>
         </div>

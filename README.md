@@ -24,6 +24,8 @@ A personal gallery application that you display your photos for others to see, w
  ###### Add Image to the Collage Gallery
  <img src="https://raw.githubusercontent.com/DynastyElvis/Photoshare/main/photoshare/static/images/Screenshot%20from%202022-05-29%2019-52-43.png">
 
+ ###### ADMIN Dashboard to manage the pictures
+ <img src="https://raw.githubusercontent.com/DynastyElvis/Photoshare/main/photoshare/static/images/Screenshot%20from%202022-05-30%2017-45-23.png">
 
 [Go Back to the top](#Photoshare)
 

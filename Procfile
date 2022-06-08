@@ -1,1 +1,1 @@
-web: gunicorn main:app
+web: gunicorn photoshare/photos.wsgi:app

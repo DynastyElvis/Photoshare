@@ -77,7 +77,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'photos.apps.PhotosConfig',
-    'photos'
+    'photoshare'
 ]
 
 MIDDLEWARE = [
